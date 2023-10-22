@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <title>To do list</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- L-S Stylesheet -->
+    <link href='style.css' rel='stylesheet' />
+    <!-- Icons-->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  </head>
+
+<body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="title"><span id="title"></span></div>
+            <p>Simplify your workflow and effortlessly organize tasks with this To-Do list app.</p>
+
+          <!-- INPU FIELD -->
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="Enter your task" id="text_field" required>
+              <label>Enter your task</label>
+              <div class="error" id="error">&nbsp;</div>
+            </div>
+          </div>
+          
+          <!-- ADD TASK BUTTON -->
+          <div class="fieldset">
+            <button type="submit" name="submit" id="submit">Add Task</button>
+          </div>  
+
+          <!-- TASK LIST -->
+        <div class="tasker-body">
+            <ul id="tasks"></ul>
+        </div>
+    </div>
+        <button class="home-btn"> < Back to Home &nbsp</button>
+    </div>
+
+    <script src="app.js"></script>
+
+  </body>
+</html>
+
+    
+    

@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --lgr_blue: linear-gradient(90deg,  rgb(108, 160, 198) 0%, rgba(109, 181, 201, 0.512) 100%);
+  --lgr_cyan: linear-gradient(129deg, rgba(255, 255, 255, 0.25) 53%, rgba(215,248,255,.75) 100%);
+  --lgr_btn_blue: linear-gradient(135deg, #ffffff, #eeeeee);
+  --lgr_default_blue: linear-gradient(135deg, #71b7e6, #2b8ae2);
+  --lgr_default_blue_hover: linear-gradient(-135deg, #82c1eb, #a4bde1);
+  --lgr_default_blue_clicked: linear-gradient(-135deg, #78aed2, #99b1d2);
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 10px;
+  /* Default background for signup */
+  background-image: url(imgs/antoine-rault-IhWRrZx4-kk-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+/*MAIN CONTAINER POSITIONING*/
+/* ---- LOG-IN DESIGN ---- */
+
+.container{
+    /* to perfectly center H V */
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+  }
+  
+  @media(max-width: 530px){
+    .container{
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        border-radius: 0;
+        height: 100%;
+        box-shadow: none;
+        width: 100%;
+   }
+  }
+
+
+/* ---- FIELD with ANIMATION -----*/
+
+.fieldset > label{
+    position: relative;
+    font-size: 16px;
+    top: -35px;
+    margin: 5px;
+    font-weight: 400;
+    padding: 0 10px;
+    visibility: visible;
+    color: grey;
+    user-select: none;
+    z-index: -1;
+  }
+
+input:focus ~ label,
+input:valid ~ label
+{
+  font-size: 13px;
+  color: #3a7cc9;
+  visibility: visible;
+  transition: all 0.3s ease;
+  top: -59px;
+  margin: -5px 10px -8px;
+  font-weight: 400;
+  background-color: white;
+  padding: 0 10px;
+  z-index: 1;
+}
+
+input:focus::placeholder,
+input:valid::placeholder {
+  color: transparent;
+  transition: all 0.3s ease;
+}
+input::placeholder {
+  transition: all 0.3s ease;
+}
+
+option{
+  color: black;
+}
+
+
+
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+@media(max-width: 530px){
+  .wrapper{
+      box-shadow: none;
+ }
+}
+
+.wrapper .title{
+  position: relative;
+  height: 100px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(imgs/title_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+  color: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(16, 53, 146);
+  margin: 0 -30px 0 -30px;
+  }
+
+
+
+@media(max-width: 584px){
+  .wrapper .title{
+    position: relative;
+    height: 100px;
+
+ }
+}
+
+.wrapper .title span{
+  font-size: 25px;
+  font-weight: 600;
+  filter: drop-shadow(10px -5px 5px rgb(255, 255, 255));
+}
+
+.wrapper{
+  width: auto;
+  padding: 0px 30px 30px 30px;
+}
+
+@media(max-width: 584px){
+  .wrapper{
+    width: 100%;
+ }
+}
+
+.wrapper .fieldset{
+  position: relative;
+  height: 45px;
+  margin-bottom: 15px;
+}
+.wrapper .primary2-btn input{
+  padding-left: 0px;
+}
+.wrapper .fieldset input, button{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  padding-right: 0PX;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.fieldset input:focus, button:focus{
+  border-color:#3a7cc9;
+  border-bottom: 2px solid #3a7cc9;
+}
+.fieldset input::placeholder, button::placeholder{
+  color:#999;
+}
+
+.wrapper .button input, button{
+  color:#fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background:var(--lgr_default_blue);
+  border: 1px solid;
+  cursor: pointer;
+}
+.wrapper .button input:hover, button:hover{
+  background: var(--lgr_default_blue_hover);
+}   
+
+.wrapper p{
+    font-size: 16px;
+    text-align: center;
+    color: #757575;
+    margin-bottom: 30px;
+}
+
+/* ---- FIELD with ANIMATION -----*/
+
+
+/* To Hide the PlaceHolder */
+#text_field:focus::placeholder,
+#text_field:valid::placeholder{
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+
+.task {
+    display: flex; /* make the children elements appear in one line */
+    align-items: center; /* vertically center the children elements */
+    justify-content: space-between;  /*create equal space between the children elements */
+  }
+
+li {
+    list-style: none;
+    padding: 8px;
+    margin-bottom: 5px;
+  }
+
+li:hover {
+    background-color: #eeeeee;
+    border-radius: 5px;
+  }
+
+  /* checkbox */
+  
+input[type="checkbox"]{
+    transform: scale(1.5);
+    margin: 0 15px 0 5px;
+  }
+  
+  /* fas icon */
+.fa-trash-o {
+    opacity: 0;
+    color: #3a7cc9;
+    font-size: 20px;
+    transform: scale(0.7);
+    transition: all 0.3s ease;
+}
+  
+.task button {
+    width: 25px;
+    background: none;
+    border: none;
+  }
+
+.task:hover .fa {
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+
+.home-btn{
+
+    right: 0;
+    height: auto;
+    text-align: right;
+    padding: 2px;
+    margin: 5px;
+    position: relative;
+    color: #ffffff;
+    font-size: 15px;
+    transform: scale(1);
+    z-index: 1;
+    background: none;
+    border: none;
+  }
+  .home-btn:hover{
+    background: none;
+    transition: all 0.3s ease;
+   /* decoration underline text with gap*/
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+  }
+
+
